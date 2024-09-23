@@ -162,7 +162,8 @@ export const themeSettings = (mode) =>{
                 }),
         },
         typography:{
-            fontFamily : ["Source Sans 3","Arial"]
+            fontFamily : ["Source Sans 3","Arial"],
+            fontSize : 12,
         }
     };
 }
