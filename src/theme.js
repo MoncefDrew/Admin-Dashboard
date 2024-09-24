@@ -162,9 +162,58 @@ export const themeSettings = (mode) =>{
                 }),
         },
         typography:{
-            fontFamily : ["Source Sans 3","Arial"],
+            fontFamily : ["Source Sans 3", "Arial"].join(","),
             fontSize : 12,
+            h1:{
+                fontFamily : ["Source Sans 3","Arial"].join(","),
+                fontSize : 40,
+            },
+            h2:{
+                fontFamily : ["Source Sans 3","Arial"].join(","),
+                fontSize : 32,
+            },
+            h3:{
+                fontFamily : ["Source Sans 3","Arial"].join(","),
+                fontSize : 24,
+            },
+            h4:{
+                fontFamily : ["Source Sans 3","Arial"].join(","),
+                fontSize : 20,
+            },
+            h5:{
+                fontFamily : ["Source Sans 3","Arial"].join(","),
+                fontSize : 16,
+            },
+            h6:{
+                fontFamily : ["Source Sans 3","Arial"].join(","),
+                fontSize : 14,
+            }
         }
     };
-}
-;
+};
+
+//context for color mode
+//ColorModeContext: This is the context object you created in your theme file
+// that holds the toggleColorMode function,
+// which allows switching between dark and light themes.
+export const ColorModeContext = createContext({
+    toggleColorMode : () => {}
+
+});
+
+//useMode: This is the custom hook that manages the theme state (light or dark)
+// and provides the theme object and the colorMode object (with the toggleColorMode function).
+export const useMode = () =>{
+    const [mode, setMode] = useState("dark");
+
+    const colorMode = useMemo(
+        () => ({
+            toggleColorMode : () =>
+                setMode((prev) => (prev === "light" ? "dark" : "light")),
+        }),
+        []
+    )
+
+    const theme = useMemo(() => createTheme(themeSettings((mode)),[mode]));
+    return [theme, colorMode];
+};
