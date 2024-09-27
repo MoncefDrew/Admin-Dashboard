@@ -214,6 +214,6 @@ export const useMode = () =>{
         []
     )
 
-    const theme = useMemo(() => createTheme(themeSettings((mode)),[mode]));
+    const theme = useMemo(() => createTheme(themeSettings(mode)),[mode]);
     return [theme, colorMode];
 };
