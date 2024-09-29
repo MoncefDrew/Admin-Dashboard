@@ -18,7 +18,8 @@ const Topbar = ( ) =>{
         <Box display="flex" justifyContent="space-between" p={2}>
             {/*Search Bar*/}
             <Box
-                display={"flex"}
+            
+                display="flex"
                 backgroundColor={colors.primary[400]}
                 borderRadius="3px"
             >
