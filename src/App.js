@@ -4,6 +4,7 @@ import Topbar from "./scenes/Global/Topbar";
 import {Route, Routes} from "react-router-dom";
 import Dashboard from "./scenes/Dashboard";
 import Sidebar from "./scenes/Global/sidebar";
+import { ProSidebar } from "react-pro-sidebar";
 /*import Team from "./scenes/team";
 import Contacts from "./scenes/contacts";
 import Invoices from "./scenes/invoices";
@@ -27,11 +28,11 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline/>
           <div className="App">
-            <Sidebar/>
-            <main className="content">
-              <Topbar/>
-              <Routes>
-                    <Route path="/" element={<Dashboard/>}/>
+              <Sidebar/>
+              <main className="content">
+                  <Topbar/>
+                  <Routes>
+                      <Route path="/" element={<Dashboard/>}/>
                     {/*<Route path="/team" element={<Team/>}/>
                     <Route path="/contacts" element={<Contacts/>}/>
                     <Route path="/invoices" element={<Invoices/>}/>

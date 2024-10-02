@@ -3,8 +3,8 @@ import { Menu ,MenuItem, ProSidebar} from "react-pro-sidebar";
  import {Box, IconButton,Typography ,useTheme} from "@mui/material";
 import links from "react-router-dom";
 import {tokens} from "../../theme";
-import "react-pro-sidebar/dist/css/styles.css";
 
+import "react-pro-sidebar/dist/css/styles.css";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import PeopleOutlinedIcon from '@mui/icons-material/PeopleOutlined';
 import ContactsOutlinedIcon from '@mui/icons-material/ContactsOutlined';
@@ -29,16 +29,20 @@ const Sidebar = ( ) =>{
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [Selected, setSelected] = useState("Dashboard");
     return (
-        <Box 
+        <Box
             sx={{
+
                 "& .pro-sidebar-inner":{
                     background : `${colors.primary[400]} !important`,
+
+
                 },
                 "& .pro-icon-wrapper":{
                     backgroundColor: "transparent !important"
                 },
                 "& .pro-inner-item":{
-                    padding:"5px 35px 5px 20px !important"
+                    padding:"5px 35px 5px 20px !important",
+
                 },
                 "& .pro-inner-item:hover":{
                     color: "#868dfb !important"
@@ -49,32 +53,42 @@ const Sidebar = ( ) =>{
             }}
 
         >
-            <ProSidebar collapsed={isCollapsed} >
+            <ProSidebar collapsed={isCollapsed}>
                 <Menu iconShape="square">
-                    {/* LGO AND MENU ICON */}
+                    {/* Header */}
                     <MenuItem
                         onClick={() => setisCollapsed(!isCollapsed)}
-                        icon={isCollapsed ? <MenuOutlinedIcon/> : undefined}
+                        icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
                         style={{
                             margin: "10px 0 20px 0",
                             color: colors.grey[100],
-                        }}>
-                        {!isCollapsed &&(
-                            <Box display="flex"
-                                 justifyContent="space-between"
-                                 alignItems="center"
-                                 ml="15px">
-                                <Typography>
-                                    ADMINIS
-                                </Typography>
-                                <IconButton>
-                                    <MenuOutlinedIcon/>
+                        }}
+                    >
+                        {!isCollapsed && (
+                            <Box
+                                display="flex"
+                                justifyContent="space-between"
+                                alignItems="center"
+                                ml="15px"
+                            >
+                                <Typography>ADMINIS</Typography>
+                                <IconButton onClick={() => setisCollapsed(!isCollapsed)}>
+                                    <MenuOutlinedIcon />
                                 </IconButton>
                             </Box>
                         )}
                     </MenuItem>
+
+                    {/* Menu Items (Now Vertically Aligned) */}
+                    <MenuItem icon={<HomeOutlinedIcon />}>Dashboard</MenuItem>
+                    <MenuItem icon={<PeopleOutlinedIcon />}>Users</MenuItem>
+                    <MenuItem icon={<ContactsOutlinedIcon />}>Contacts</MenuItem>
+                    <MenuItem icon={<ReceiptOutlinedIcon />}>Invoices</MenuItem>
+                    <MenuItem icon={<PersonOutlinedIcon />}>Profile</MenuItem>
+                    <MenuItem icon={<HelpOutlinedIcon />}>Help</MenuItem>
                 </Menu>
             </ProSidebar>
+
         </Box>
 
     )

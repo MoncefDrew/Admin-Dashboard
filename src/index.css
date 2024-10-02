@@ -1,33 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
 html,
 body,
 #root,
-.app,
-.content{
+.content {
+  height: 100%;
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+
+}
+.App{
+  display: flex;
+  flex-direction: row;
   height: 100%;
   width: 100%;
 }
 
-.app{
-  display: flex;
-  position: relative;
-}
-/* scroll bar settings so it doesm't feel out of place*/
-::-webkit-scrollbar{
+
+
+::-webkit-scrollbar {
   width: 10px;
 }
 
 /* Track */
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background: #e0e0e0;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: #888;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-track:hover{
+::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
