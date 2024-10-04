@@ -131,6 +131,12 @@ const Sidebar = ( ) =>{
                               setSelected={setSelected}
                               selected={Selected}
                         />
+                        <Typography
+                            variant="h6"
+                            color={colors.grey[300]}
+                            sx={{m : "15px 0 5px 20px"}}>
+                            Data
+                        </Typography>
                         <Item title="Manage Team"
                               to="/team"
                               icon={<PeopleOutlinedIcon/>}
@@ -149,6 +155,12 @@ const Sidebar = ( ) =>{
                               setSelected={setSelected}
                               selected={Selected}
                         />
+                        <Typography
+                            variant="h6"
+                            color={colors.grey[300]}
+                            sx={{m : "15px 0 5px 20px"}}>
+                            Pages
+                        </Typography>
                         <Item title="Profile Form"
                               to="/form"
                               icon={<PersonOutlinedIcon/>}
@@ -167,6 +179,12 @@ const Sidebar = ( ) =>{
                               setSelected={setSelected}
                               selected={Selected}
                         />
+                        <Typography
+                            variant="h6"
+                            color={colors.grey[300]}
+                            sx={{m : "15px 0 5px 20px"}}>
+                            Charts
+                        </Typography>
                         <Item title="Bar Chart"
                               to="/bar"
                               icon={<BarchartOutlinedIcon/>}
