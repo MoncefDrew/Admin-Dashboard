@@ -6,16 +6,16 @@ import Dashboard from "./scenes/Dashboard";
 import Sidebar from "./scenes/Global/sidebar";
 import { ProSidebar } from "react-pro-sidebar";
 import Invoices from "./scenes/Invoices/index";
-/*import Team from "./scenes/team";
-import Contacts from "./scenes/contacts";
+import Team from "./scenes/Team/index";
+/*import Contacts from "./scenes/contacts";
 import Form from "./scenes/form";
 import Bar from "./scenes/bar";
 import Pie from "./scenes/pie";
 import Line from "./scenes/line";
 import FAQ from "./scenes/faq";
 import Calendar from "./scenes/calendar";
-import Geography from "./scenes/geography";
-*/
+import Geography from "./scenes/geography";*/
+
 
 
 
@@ -34,7 +34,8 @@ function App() {
                   <Routes>
                       <Route path="/" element={<Dashboard/>}/>
                       <Route path="/invoices" element={<Invoices/>}/>
-                    {/*<Route path="/team" element={<Team/>}/>
+                      <Route path="/team" element={<Team/>}/>
+                    {/*
                     <Route path="/contacts" element={<Contacts/>}/>
                     <Route path="/form" element={<Form/>}/>
                     <Route path="/bar" element={<Bar/>}/>
