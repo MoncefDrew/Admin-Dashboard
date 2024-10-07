@@ -1,8 +1,11 @@
-import { Box ,useTheme } from "@mui/material";
+import {Box, Typography, useTheme} from "@mui/material";
 import { DataGrid ,GridToolbar} from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
+import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
+import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
+import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 
 const Team = () => {
     const theme = useTheme();
@@ -98,7 +101,7 @@ const Team = () => {
                     },
                 }}
             >
-                <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} />
+                <DataGrid checkboxSelection rows={mockDataContacts} columns={columns} />
             </Box>
         </Box>
     );
