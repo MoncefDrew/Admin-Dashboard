@@ -8,7 +8,8 @@ import { ProSidebar } from "react-pro-sidebar";
 import Invoices from "./scenes/Invoices/index";
 import Contacts from "./scenes/Contacts/index";
 import Team from "./scenes/Team/index";
-/*import Form from "./scenes/form";
+import Form from "./scenes/form";
+/*
 import Bar from "./scenes/bar";
 import Pie from "./scenes/pie";
 import Line from "./scenes/line";
@@ -36,8 +37,9 @@ function App() {
                       <Route path="/invoices" element={<Invoices/>}/>
                       <Route path="/team" element={<Team/>}/>
                       <Route path="/contacts" element={<Contacts/>}/>
+                      <Route path="/form" element={<Form/>}/>
                     {/*
-                    <Route path="/form" element={<Form/>}/>
+
                     <Route path="/bar" element={<Bar/>}/>
                     <Route path="/pie" element={<Pie/>}/>
                     <Route path="/line" element={<Line/>}/>
