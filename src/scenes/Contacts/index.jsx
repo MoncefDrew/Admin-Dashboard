@@ -40,7 +40,7 @@ const Team = () => {
             field: "accessLevel",
             headerName: "Access Level",
             flex: 1,
-            renderCell: ({ row: { access } }) => {
+            renderCell: ({ row: { accessLevel } }) => {
                 return (
                     <Box
                         width="60%"
@@ -49,19 +49,19 @@ const Team = () => {
                         display="flex"
                         justifyContent="center"
                         backgroundColor={
-                            access === "admin"
+                            accessLevel === "admin"
                                 ? colors.greenAccent[600]
-                                : access === "manager"
+                                : accessLevel === "manager"
                                     ? colors.greenAccent[700]
                                     : colors.greenAccent[700]
                         }
                         borderRadius="4px"
                     >
-                        {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
-                        {access === "manager" && <SecurityOutlinedIcon />}
-                        {access === "user" && <LockOpenOutlinedIcon />}
+                        {accessLevel === "admin" && <AdminPanelSettingsOutlinedIcon />}
+                        {accessLevel === "manager" && <SecurityOutlinedIcon />}
+                        {accessLevel === "user" && <LockOpenOutlinedIcon />}
                         <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-                            {access}
+                            {accessLevel}
                         </Typography>
                     </Box>
                 );
