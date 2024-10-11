@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/user-attachments/assets/1d32dbba-200f-453f-b47e-900c3ddee887)
+Admin Dashboard is a front-end project designed to present many options for a responsable entreprise agent
 
 ## Available Scripts
 
