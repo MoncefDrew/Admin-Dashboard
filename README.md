@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 Admin Management Dashboard: A comprehensive solution designed to streamline company administration, providing real-time data visualization, intuitive navigation, and robust reporting tools to optimize decision-making and operational efficiency.
+
+
 ![image](https://github.com/user-attachments/assets/e91395f5-aa25-4eac-b153-c685deb1765f)
 
  
